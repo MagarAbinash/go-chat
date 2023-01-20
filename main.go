@@ -33,7 +33,8 @@ func main() {
 		if err != nil {
 			fmt.Println(err.Error())
 		}
-		return c.JSON([]string{})
+		fmt.Println("message:", data)
+		return c.JSON([]string{"successfully sent"})
 	})
 
 	app.Listen(":3000")
